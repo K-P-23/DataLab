@@ -57,7 +57,7 @@ public class Driver {
 		File text = new File("Cereal.csv");
 		Scanner scnr;
 		ArrayList<Cereal> cereals = new ArrayList<Cereal>();
-		
+		//
 		try {
 			scnr = new Scanner(text);
 			scnr.nextLine();
