@@ -48,7 +48,7 @@ class Cereal {
 	public void setFibr(int fibr)
 		{	this.fibr = fibr;	}
 
-}//
+}
 
 
 public class Driver {
