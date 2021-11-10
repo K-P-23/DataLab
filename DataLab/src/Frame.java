@@ -46,7 +46,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	
 	
 
-		Timer t = new Timer(16, this);
+		Timer t = new Timer(1000, this);
 		t.start();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setVisible(true);
