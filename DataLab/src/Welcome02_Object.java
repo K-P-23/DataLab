@@ -29,7 +29,7 @@ public class Welcome02_Object {
 
 /* Represents a weather observation */
 class Observation {
-   float temp;    // in fahrenheit
+   float temp;    // in Fahrenheit
    int windDir;   // in degrees
    String description;
    
