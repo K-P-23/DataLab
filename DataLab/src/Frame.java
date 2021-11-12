@@ -70,7 +70,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
 
-		bg.changePicture("cloudy.jpg");
+		bg.changePicture("sunny.jpg");
 	}
 
 	@Override

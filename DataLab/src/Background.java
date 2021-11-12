@@ -16,7 +16,7 @@ public class Background{
 	private double scaleW = 1.0, scaleH = 2.0;
 
 	public Background(int x, int y) {
-		img = getImage("sunny.jpg"); //load the image for Tree
+		img = getImage("weather2.jpg"); //load the image for Tree
 		this.x = x;
 		this.y = y;
 		tx = AffineTransform.getTranslateInstance(x, y );
