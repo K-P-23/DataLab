@@ -9,19 +9,17 @@ import java.net.URL;
 
 public class Background{
 	
-	//add location attributes
-	private int x, y; //position of the bird
+	private int x, y;
 	private Image img; 	
 	private AffineTransform tx;
-	private double scaleW = 1.0, scaleH = 2.0;
+	private double scaleW = 0.5, scaleH = 0.5;
 
 	public Background(int x, int y) {
-		img = getImage("weather2.jpg"); //load the image for Tree
+		img = getImage("churchOfGod.jpg");
 		this.x = x;
 		this.y = y;
 		tx = AffineTransform.getTranslateInstance(x, y );
-		init(x, y); 				//initialize the location of the image
-									//use your variables
+		init(x, y);
 	}
 	
 	public void changePicture(String newFileName) {
@@ -30,18 +28,14 @@ public class Background{
 	}
 	
 	public void paint(Graphics g) {
-		//these are the 2 lines of code needed draw an image on the screen
 		Graphics2D g2 = (Graphics2D) g;
 		
-		
-		//call update to update the actualy picture location
 		update();
 		g2.drawImage(img, tx, null);
 		
 		
 
 	}
-	/* update the picture variable location */
 	private void update() {
 		tx.setToTranslation(x, y);
 		tx.scale(scaleW, scaleH);

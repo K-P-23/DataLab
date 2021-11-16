@@ -18,11 +18,7 @@ import core.data.DataSource;
 
 public class Frame extends JPanel implements ActionListener, MouseListener, KeyListener {
 
-	// CREATE THE OBJECT (STEP 1)
 	Background bg = new Background(0, 0);
-
-	// Scoring variables
-	int score = 0;
 
 	public void paint(Graphics g) {
 		super.paintComponent(g);
@@ -36,14 +32,21 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 		ds1.setCacheTimeout(15 * 60);
 		ds1.load();
 		Observation ob1 = ds1.fetch("Observation", "weather", "temp_f", "wind_degrees");
+		
+		String one = (ob1.toString()).substring(0, 27);
+		String two = ob1.toString().substring( 28, ob1.toString().length() );
+		
+		
 		//Copied from ActionsPerformed
+		
 		//Paints stats
-		g.setColor(Color.BLUE);
+		g.setColor(Color.white);
 		g.setFont(new Font("Arial", Font.BOLD, 30));
-		g.drawString(id1 + ":", 150,480);
+		g.drawString(id1 + ":", 580,280);
 		g.setFont(new Font("Arial", Font.BOLD, 15));
-		g.drawString(""+ob1, 40,500);
-
+		g.drawString(""+one, 530,300);
+		g.drawString(""+two, 550,320);
+		
 	}
 
 	public static void main(String[] arg) {
@@ -52,8 +55,8 @@ public class Frame extends JPanel implements ActionListener, MouseListener, KeyL
 
 	public Frame() {
 		JFrame f = new JFrame("Saturday Night Live");
-		f.setSize(new Dimension(400, 600));
-		f.setBackground(Color.blue);
+		f.setSize(new Dimension(750, 520));
+		f.setBackground(Color.green);
 		f.add(this);
 		f.setResizable(false);
 		f.setLayout(new GridLayout(1, 2));
